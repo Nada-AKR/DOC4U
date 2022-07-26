@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "351315608722",
+    "project_id": "doc4u-f62ca",
+    "storage_bucket": "doc4u-f62ca.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:351315608722:android:9eec012eacf4bfa379524b",
+        "android_client_info": {
+          "package_name": "com.example.doc4u"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "351315608722-kcb46917rrh3p9kg8ocopujao5qsonf0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD0HKzcn97lZpRe71qVe3Lzy7u6VxXaWIo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "351315608722-kcb46917rrh3p9kg8ocopujao5qsonf0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
