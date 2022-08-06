@@ -1,3 +1,4 @@
+import 'package:doc4u/screens/SplashScreen.dart';
 import 'package:doc4u/screens/signin_screen.dart';
 import 'package:doc4u/screens/welcome_screen.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -18,11 +19,9 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-        
         primarySwatch: Colors.blue,
       ),
-      home: const WelcomeScreen(),
+      home: const SplashScreen(),
     );
   }
 }
-

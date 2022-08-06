@@ -1,5 +1,6 @@
 import 'package:doc4u/reusable_widgets/reusable_widget.dart';
 import 'package:doc4u/screens/home_screen.dart';
+import 'package:doc4u/screens/profile.dart';
 import 'package:doc4u/screens/reset_password.dart';
 import 'package:doc4u/screens/signup_screen.dart';
 import 'package:doc4u/utils/color_utils.dart';
@@ -51,7 +52,7 @@ class _SignInScreenState extends State<SignInScreen> {
                           password: _passwordTextController.text)
                       .then((value) {
                     Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => HomeScreen()));
+                        MaterialPageRoute(builder: (context) => Profile()));
                   }).onError((error, stackTrace) {
                     print("Error ${error.toString()}");
                   });

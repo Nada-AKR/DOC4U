@@ -50,6 +50,7 @@ android {
         targetSdkVersion 30
         versionCode 1
         versionName "1.0"
+        multiDexEnabled true
     }
 
     buildTypes {
@@ -73,5 +74,5 @@ dependencies {
     implementation("androidx.work:work-runtime-ktx:$work_version") {
         force = true
     }
-    
+    implementation 'com.android.support:multidex:2.0.1'
 }

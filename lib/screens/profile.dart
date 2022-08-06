@@ -1,4 +1,5 @@
 import 'package:doc4u/reusable_widgets/reusable_widget.dart';
+import 'package:doc4u/screens/aboutUs.dart';
 import 'package:doc4u/screens/profile_update.dart';
 import 'package:doc4u/utils/color_utils.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -38,7 +39,7 @@ class _ProfileState extends State<Profile> {
                 20, MediaQuery.of(context).size.height * 0.2, 20, 0),
             child: Column(
               children: <Widget>[
-                logoWidget("assets/images/logo.png"),
+                logoWidget("assets/images/taswyra.png"),
                 SizedBox(
                   height: 10,
                 ),
@@ -53,7 +54,6 @@ class _ProfileState extends State<Profile> {
                   margin: EdgeInsets.symmetric(horizontal: 40),
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(30),
-                    color: Colors.black,
                   ),
                   child: Column(
                     children: [
@@ -68,20 +68,23 @@ class _ProfileState extends State<Profile> {
                       SizedBox(
                         height: 20,
                       ),
-                      Text("${user!.email}", style: TextStyle(
-                        fontWeight: FontWeight.w400,
-                        fontSize: 24,
-                        color: Colors.black,
-                       ),
-                       ),
-                       SizedBox(height: 40,),
-                        firebaseUIButton(context, "Update Profile", () {
-                          Navigator.push(context,
-              MaterialPageRoute<void>(
-                builder:(BuildContext context) { 
-                  return ProfileUpdate();
-                })); 
-                        }),
+                      Text(
+                        "${user!.email}",
+                        style: TextStyle(
+                          fontWeight: FontWeight.w400,
+                          fontSize: 24,
+                          color: Colors.black,
+                        ),
+                      ),
+                      SizedBox(
+                        height: 100,
+                      ),
+                      firebaseUIButton(context, "Update Profile", () {
+                        Navigator.push(context, MaterialPageRoute<void>(
+                            builder: (BuildContext context) {
+                          return AboutUs();
+                        }));
+                      }),
                     ],
                   ),
                 )
