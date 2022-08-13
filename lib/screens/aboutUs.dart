@@ -83,7 +83,7 @@ class _AboutUsState extends State<AboutUs> {
             Container(
               margin: EdgeInsets.symmetric(horizontal: 30),
               child: Text(
-                'This mobile application was developed by a student at SUPCOM as part of an engineering internship at the startup TAC TIC.',
+                'This mobile application was developed by AKKARI Nada , a student at SUPCOM as part of an engineering internship at the startup TAC TIC.',
                 style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
               ),
             ),

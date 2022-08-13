@@ -37,10 +37,16 @@ class _SignInScreenState extends State<SignInScreen> {
             child: Column(
               children: <Widget>[
                 logoWidget("assets/images/logo.png"),
-                SizedBox(height: 40, ),
-                reusableTextField("Enter UserName", Icons.person_outline, false, _emailTextController),
-                SizedBox(height: 30,),
-                reusableTextField("Enter Password", Icons.lock_outline, true, _passwordTextController),
+                SizedBox(
+                  height: 40,
+                ),
+                reusableTextField("Enter Email", Icons.person_outline, false,
+                    _emailTextController),
+                SizedBox(
+                  height: 30,
+                ),
+                reusableTextField("Enter Password", Icons.lock_outline, true,
+                    _passwordTextController),
                 const SizedBox(
                   height: 5,
                 ),
@@ -52,7 +58,7 @@ class _SignInScreenState extends State<SignInScreen> {
                           password: _passwordTextController.text)
                       .then((value) {
                     Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => Profile()));
+                        MaterialPageRoute(builder: (context) => HomeScreen()));
                   }).onError((error, stackTrace) {
                     print("Error ${error.toString()}");
                   });
@@ -65,30 +71,28 @@ class _SignInScreenState extends State<SignInScreen> {
       ),
     );
   }
-   Row signUpOption() {
+
+  Row signUpOption() {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         const Text("Don't have account?",
-            style: TextStyle(
-              color: Colors.black)),
+            style: TextStyle(color: Colors.black)),
         GestureDetector(
           onTap: () {
-            Navigator.push(
-              context,
+            Navigator.push(context,
                 MaterialPageRoute(builder: (context) => SignUpScreen()));
           },
           child: const Text(
             " Sign Up",
-            style: TextStyle(
-              color: Colors.black, fontWeight: FontWeight.bold),
+            style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
           ),
         )
       ],
     );
   }
 
-Widget forgetPassword(BuildContext context) {
+  Widget forgetPassword(BuildContext context) {
     return Container(
       width: MediaQuery.of(context).size.width,
       height: 35,
@@ -104,5 +108,4 @@ Widget forgetPassword(BuildContext context) {
       ),
     );
   }
-  
 }

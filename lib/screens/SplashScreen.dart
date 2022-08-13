@@ -58,7 +58,7 @@ class _SplashScreenState extends State<SplashScreen> {
                   height: 70,
                 ),
                 Text(
-                  'Tense Yet Sweet',
+                  'Tense Yet Sweet !!',
                   style: TextStyle(
                       fontSize: 18,
                       fontWeight: FontWeight.bold,
@@ -70,11 +70,27 @@ class _SplashScreenState extends State<SplashScreen> {
                 CircularProgressIndicator(
                   valueColor: AlwaysStoppedAnimation(Colors.white),
                 ),
+                Align(
+                  alignment: Alignment.bottomCenter,
+                  child: Text(
+                    'Made with ❤️ by',
+                    style: TextStyle(fontSize: 16, color: Colors.white),
+                  ),
+                ),
+                Align(
+                  alignment: Alignment.bottomCenter,
+                  child: Text(
+                    'AKKARI Nada : Student at SUPCOM',
+                    style: TextStyle(fontSize: 16, color: Colors.white),
+                  ),
+                ),
               ],
             ),
           ),
         ),
-      )),
+      ),
+      
+      ),
     );
   }
 }

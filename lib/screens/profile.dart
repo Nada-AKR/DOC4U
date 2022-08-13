@@ -1,5 +1,8 @@
 import 'package:doc4u/reusable_widgets/reusable_widget.dart';
+import 'package:doc4u/screens/Settings.dart';
+import 'package:doc4u/screens/SideBar.dart';
 import 'package:doc4u/screens/aboutUs.dart';
+import 'package:doc4u/screens/help.dart';
 import 'package:doc4u/screens/profile_update.dart';
 import 'package:doc4u/utils/color_utils.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -82,7 +85,7 @@ class _ProfileState extends State<Profile> {
                       firebaseUIButton(context, "Update Profile", () {
                         Navigator.push(context, MaterialPageRoute<void>(
                             builder: (BuildContext context) {
-                          return AboutUs();
+                          return ProfileUpdate();
                         }));
                       }),
                     ],
